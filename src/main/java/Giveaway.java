@@ -3,23 +3,17 @@ import java.util.*;
 public class Giveaway {
 
     public static void main(String[] args) {
-        int n, i, x = 0;
-        String num = "xy";
+        int n, i, x;
+        String num;
         ArrayList<Integer> arr = new ArrayList<Integer>();
         Scanner input = new Scanner(System.in);
-        while(num.length()>0){
-            try{
-                num = input.nextLine();
-                String[] strArr = num.split(" ");
-                for(i=0;i<strArr.length;i++){
-                    x = Integer.parseInt(strArr[i]);
-                    arr.add(x);   
-                }
-                //System.out.println(arr);
-            }
-            catch(NumberFormatException e){
-                System.out.println("input completed!");
-            }
+        Scanner input1 = new Scanner(System.in);
+        n = input1.nextInt();
+        num = input.nextLine();
+        String[] strArr = num.split(" ");
+        for(i=0;i<strArr.length;i++){
+            x = Integer.parseInt(strArr[i]);
+            arr.add(x);   
         }
         System.out.println(arr);
         input.close();
